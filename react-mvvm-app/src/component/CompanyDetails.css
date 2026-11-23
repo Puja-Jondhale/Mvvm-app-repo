@@ -1,0 +1,394 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.company-page {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #edf5ff;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #303744;
+}
+
+/* SIDEBAR */
+
+.company-sidebar {
+  width: 228px;
+  min-width: 228px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #eeeeee;
+}
+
+.company-logo-area {
+  height: 155px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-logo {
+  height: 65px;
+  width: 65px;
+}
+
+.company-logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.company-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+}
+
+.company-sidebar-link {
+  height: 50px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0 12px;
+  font-size: 15px;
+  color: #253247;
+  text-align: left;
+  cursor: pointer;
+}
+
+.company-sidebar-link svg {
+  color: #b3b5b7;
+}
+
+.company-sidebar-link:hover {
+  background: #f3f9f0;
+}
+
+.company-sidebar-link.active {
+  background: #79d94f;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.company-sidebar-link.active svg {
+  color: #ffffff;
+}
+
+/* MAIN */
+
+.company-main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* HEADER */
+
+.company-header {
+  height: 88px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px 0 33px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.company-header-title h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  color: #293343;
+}
+
+.company-header-title span {
+  color: #a2a2a2;
+  font-size: 14px;
+}
+
+.company-header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.company-welcome {
+  color: #263447;
+  font-size: 18px;
+  border-bottom: 2px solid #00c49a;
+  padding-bottom: 3px;
+}
+
+.company-header-icons {
+  height: 55px;
+  background: #eef0ff;
+  border-radius: 35px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.company-header-icons button {
+  position: relative;
+  border: none;
+  background: transparent;
+  color: #0644c9;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.company-notification-count {
+  position: absolute;
+  top: -12px;
+  right: -9px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: red;
+  color: #ffffff;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CONTENT */
+
+.company-content {
+  min-height: calc(100vh - 88px);
+  background: #edf5ff;
+  padding: 8px 3.5%;
+}
+
+.company-details-card {
+  width: 100%;
+  min-height: 690px;
+  background: #ffffff;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* GREEN TITLE */
+
+.company-title-bar {
+  height: 60px;
+  background: #269c2c;
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  gap: 16px;
+}
+
+.company-title-bar h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #354b36;
+}
+
+.company-back-button {
+  height: 35px;
+  width: 35px;
+  background: #ffffff;
+  color: #2671c8;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* BODY */
+
+.company-details-body {
+  display: grid;
+  grid-template-columns: 57% 43%;
+  min-height: 570px;
+  padding: 22px 35px;
+}
+
+/* INFORMATION */
+
+.company-information {
+  padding-right: 32px;
+}
+
+.company-section-title {
+  display: inline-block;
+  font-size: 17px;
+  color: #303744;
+  font-weight: 600;
+  margin: 0 0 21px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d7eee2;
+}
+
+.company-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.company-info-item {
+  min-height: 82px;
+  padding: 16px 14px;
+  border-radius: 10px;
+  background: #f6f8fb;
+  border: 1px solid #edf0f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.company-info-item label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #526984;
+  margin-bottom: 9px;
+}
+
+.company-info-item p {
+  font-size: 14px;
+  color: #111827;
+  margin: 0;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+/* QR CODE */
+
+.company-qr-section {
+  border-left: 1px solid #edf0f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-qr-section h3 {
+  font-size: 13px;
+  font-weight: 500;
+  color: #222222;
+  margin: 0 0 18px;
+}
+
+.company-qr-box {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+
+/* FOOTER */
+
+.company-details-footer {
+  height: 57px;
+  padding: 0 32px;
+  border-top: 1px solid #e6ebf0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.company-next-button {
+  width: 122px;
+  height: 37px;
+  background: #269c2c;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.company-next-button:hover {
+  background: #178c23;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .company-details-body {
+    grid-template-columns: 1fr;
+  }
+
+  .company-qr-section {
+    border-left: none;
+    border-top: 1px solid #edf0f5;
+    margin-top: 25px;
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .company-sidebar {
+    width: 65px;
+    min-width: 65px;
+  }
+
+  .company-sidebar-link {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .company-sidebar-link span {
+    display: none;
+  }
+
+  .company-logo-area {
+    height: 100px;
+  }
+
+  .company-sidebar-nav {
+    margin-top: 30px;
+  }
+
+  .company-header {
+    padding: 12px;
+  }
+
+  .company-header-title h1 {
+    font-size: 14px;
+  }
+
+  .company-welcome {
+    display: none;
+  }
+
+  .company-header-icons {
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .company-content {
+    padding: 12px;
+  }
+
+  .company-details-body {
+    padding: 18px 14px;
+  }
+
+  .company-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-information {
+    padding-right: 0;
+  }
+}

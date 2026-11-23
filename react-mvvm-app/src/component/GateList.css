@@ -1,0 +1,654 @@
+
+/* =================================
+   MAIN PAGE
+================================= */
+
+.gate-page,
+.gate-page * {
+  box-sizing: border-box;
+}
+
+.gate-page {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #edf5ff;
+  color: #253247;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* =================================
+   SIDEBAR
+================================= */
+
+.gate-sidebar {
+  width: 228px;
+  min-width: 228px;
+  min-height: 100vh;
+  background: #fff;
+  border-right: 1px solid #eee;
+}
+
+.gate-logo-area {
+  height: 155px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gate-logo {
+  width: 65px;
+  height: 65px;
+}
+
+.gate-logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.gate-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+}
+
+.gate-sidebar-link {
+  height: 50px;
+  width: 100%;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border: none;
+  background: transparent;
+  color: #253247;
+  font-size: 15px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.gate-sidebar-link svg {
+  color: #b3b5b7;
+  flex-shrink: 0;
+}
+
+.gate-sidebar-link:hover {
+  background: #f3f9f0;
+}
+
+.gate-sidebar-link.active {
+  background: #79d94f;
+  color: #fff;
+  font-weight: 700;
+}
+
+.gate-sidebar-link.active svg {
+  color: #fff;
+}
+
+/* =================================
+   MAIN CONTENT
+================================= */
+
+.gate-main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* =================================
+   HEADER
+================================= */
+
+.gate-header {
+  height: 88px;
+  padding: 0 25px 0 33px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.gate-company h1 {
+  margin: 0;
+  color: #293343;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.gate-company span {
+  color: #a2a2a2;
+  font-size: 14px;
+}
+
+.gate-header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.gate-welcome {
+  color: #263447;
+  font-size: 18px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #00c49a;
+}
+
+.gate-header-icons {
+  height: 55px;
+  padding: 0 16px;
+  background: #eef0ff;
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.gate-header-icons button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  color: #0644c9;
+  cursor: pointer;
+}
+
+.gate-notification {
+  position: absolute;
+  top: -12px;
+  right: -9px;
+  width: 20px;
+  height: 20px;
+  background: red;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+/* =================================
+   CONTENT BACKGROUND
+================================= */
+
+.gate-content {
+  min-height: calc(100vh - 88px);
+  padding: 25px 3.2%;
+  background: #edf5ff;
+}
+
+.gate-card {
+  width: 100%;
+  background: #fff;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.045);
+}
+
+/* =================================
+   TOOLBAR
+================================= */
+
+.gate-toolbar {
+  min-height: 77px;
+  padding: 14px 22px 14px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.gate-title {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.gate-title h2 {
+  margin: 0;
+  color: #293343;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.gate-back-button {
+  width: 17px;
+  height: 17px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: #f5f8fc;
+  color: #0644d9;
+  cursor: pointer;
+}
+
+/* =================================
+   SEARCH
+================================= */
+
+.gate-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.gate-search {
+  width: 269px;
+  height: 39px;
+  padding: 0 12px;
+  border: 1px solid #dfe6ef;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #8da1ba;
+}
+
+.gate-search input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #253247;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.gate-search input::placeholder {
+  color: #7e8da1;
+}
+
+.gate-search button {
+  display: flex;
+  border: none;
+  background: transparent;
+  color: #8190a5;
+  cursor: pointer;
+}
+
+/* =================================
+   ADD BUTTON
+================================= */
+
+.gate-add-button {
+  height: 42px;
+  min-width: 120px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: none;
+  border-radius: 7px;
+  background: #269c2c;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.gate-add-button:hover {
+  background: #188c24;
+}
+
+/* =================================
+   TABLE
+================================= */
+
+.gate-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.gate-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.gate-table thead {
+  height: 51px;
+  background: #269c2c;
+  color: #fff;
+}
+
+.gate-table th {
+  padding: 0 14px;
+  text-align: left;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.gate-table th:nth-child(1) {
+  width: 85px;
+  text-align: center;
+}
+
+.gate-table th:nth-child(2) {
+  width: 43%;
+}
+
+.gate-table th:nth-child(3) {
+  width: 37%;
+}
+
+.gate-table th:nth-child(4) {
+  width: 120px;
+  text-align: center;
+}
+
+/* ROW */
+
+.gate-table tbody tr {
+  height: 57px;
+  border-bottom: 1px solid #e3eaf3;
+}
+
+.gate-table tbody tr:hover {
+  background: #fbfdff;
+}
+
+.gate-table td {
+  padding: 9px 14px;
+  color: #34465f;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.gate-serial {
+  text-align: center;
+  color: #172337 !important;
+}
+
+.gate-branch-name,
+.gate-name {
+  color: #34465f !important;
+  font-weight: 500;
+}
+
+.gate-action-heading {
+  text-align: center !important;
+}
+
+/* =================================
+   EDIT / DELETE
+================================= */
+
+.gate-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.gate-edit,
+.gate-delete {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gate-edit {
+  background: #e0f3ff;
+  color: #00a5ee;
+}
+
+.gate-edit:hover {
+  background: #c9ebff;
+}
+
+.gate-delete {
+  background: #ffe1e1;
+  color: #ff4444;
+}
+
+.gate-delete:hover {
+  background: #ffcccc;
+}
+
+/* EMPTY TABLE */
+
+.gate-empty {
+  height: 100px;
+  text-align: center;
+  color: #8793a4 !important;
+}
+
+/* =================================
+   TABLE FOOTER / NEXT BUTTON
+================================= */
+
+.gate-table-footer {
+  min-height: 62px;
+  padding: 12px 21px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: #f8fafc;
+}
+
+.gate-next-button {
+  height: 36px;
+  min-width: 97px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: none;
+  border-radius: 7px;
+  background: #269c2c;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.gate-next-button:hover {
+  background: #188c24;
+}
+
+/* =================================
+   ADD / EDIT MODAL
+================================= */
+
+.gate-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.gate-modal {
+  width: 450px;
+  max-width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+}
+
+.gate-modal-header {
+  height: 58px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #269c2c;
+  color: #fff;
+}
+
+.gate-modal-header h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.gate-modal-header button {
+  display: flex;
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.gate-modal-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.gate-modal-body label {
+  color: #43546b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.gate-modal-body input {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #dce4ee;
+  border-radius: 7px;
+  outline: none;
+  background: #fff;
+  color: #253247;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.gate-modal-body input:focus {
+  border-color: #269c2c;
+}
+
+.gate-error {
+  margin: 0;
+  color: #e53935;
+  font-size: 12px;
+}
+
+/* MODAL FOOTER */
+
+.gate-modal-footer {
+  padding: 14px 22px;
+  border-top: 1px solid #e8edf3;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.gate-cancel-button,
+.gate-save-button {
+  height: 38px;
+  min-width: 90px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.gate-cancel-button {
+  border: 1px solid #dce4ee;
+  background: #fff;
+  color: #475569;
+}
+
+.gate-save-button {
+  border: none;
+  background: #269c2c;
+  color: #fff;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 800px) {
+
+  .gate-sidebar {
+    width: 65px;
+    min-width: 65px;
+  }
+
+  .gate-logo-area {
+    height: 100px;
+  }
+
+  .gate-sidebar-nav {
+    margin-top: 30px;
+  }
+
+  .gate-sidebar-link {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .gate-sidebar-link span {
+    display: none;
+  }
+
+  .gate-header {
+    padding: 12px;
+  }
+
+  .gate-company h1 {
+    font-size: 14px;
+  }
+
+  .gate-welcome {
+    display: none;
+  }
+
+  .gate-header-icons {
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .gate-content {
+    padding: 15px;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .gate-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .gate-toolbar-actions {
+    width: 100%;
+  }
+
+  .gate-search {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .gate-add-button {
+    min-width: 105px;
+  }
+
+}

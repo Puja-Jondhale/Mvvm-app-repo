@@ -1,0 +1,577 @@
+
+/* =====================================
+   GLOBAL
+===================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+.access360-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fb;
+}
+
+/* =====================================
+   MAIN LOGIN CARD
+===================================== */
+
+.access360-card {
+  width: 100%;
+  max-width: 1020px;
+  height: 540px;
+  display: grid;
+  grid-template-columns: 42% 58%;
+  background: #ffffff;
+  border-radius: 17px;
+  overflow: hidden;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.15);
+}
+
+/* =====================================
+   LEFT PANEL
+===================================== */
+
+.access360-left {
+  position: relative;
+  padding: 30px 43px 25px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    135deg,
+    #142f35 0%,
+    #1c3d45 55%,
+    #284e5b 100%
+  );
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* =====================================
+   BRAND
+===================================== */
+
+.access360-brand {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.access360-logo {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.7px;
+  color: #ffffff;
+}
+
+.access360-logo span {
+  color: #20a42f;
+}
+
+.access360-tagline {
+  margin: 10px 0 0;
+  font-size: 11px;
+  font-weight: 400;
+  color: #b7cbd3;
+  letter-spacing: 0.1px;
+}
+
+/* =====================================
+   SECURITY LOGO
+===================================== */
+
+.access360-security {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.access360-main-logo {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  display: block;
+  background: transparent;
+}
+
+/* =====================================
+   FEATURE LIST
+===================================== */
+
+.access360-feature-list {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.access360-feature {
+  width: 100%;
+  min-height: 89px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.access360-feature-last {
+  border-bottom: none;
+}
+
+.access360-feature-icon {
+  width: 17px;
+  min-width: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #19a936;
+}
+
+.access360-feature-content {
+  flex: 1;
+}
+
+.access360-feature-content h3 {
+  margin: 0 0 5px;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.access360-feature-content p {
+  margin: 0;
+  color: #a9c0c9;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/* =====================================
+   RIGHT PANEL
+===================================== */
+
+.access360-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 60px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* =====================================
+   DOT BACKGROUND
+===================================== */
+
+.access360-dot-pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 210px;
+  height: 210px;
+  opacity: 0.55;
+  pointer-events: none;
+
+  background-image: radial-gradient(
+    circle,
+    #c7edce 1.5px,
+    transparent 1.6px
+  );
+
+  background-size: 16px 16px;
+}
+
+/* =====================================
+   FORM CONTAINER
+===================================== */
+
+.access360-form-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 472px;
+}
+
+/* =====================================
+   HEADING
+===================================== */
+
+.access360-heading {
+  margin-bottom: 22px;
+}
+
+.access360-heading h2 {
+  margin: 0 0 10px;
+  color: #293b4b;
+  font-size: 25px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.access360-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.access360-mobile-logo {
+  display: none;
+}
+
+/* =====================================
+   FORM GROUP
+===================================== */
+
+.access360-form {
+  width: 100%;
+}
+
+.access360-form-group {
+  margin-bottom: 17px;
+}
+
+.access360-form-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #263445;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =====================================
+   INPUT BOX
+===================================== */
+
+.access360-input-box {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0 15px;
+  border: 1px solid #dce4ed;
+  border-radius: 7px;
+  background: #ffffff;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.access360-input-box:focus-within {
+  border-color: #21a637;
+  box-shadow: 0 0 0 2px rgba(33, 166, 55, 0.08);
+}
+
+.access360-input-icon {
+  flex-shrink: 0;
+  color: #16a536;
+}
+
+.access360-input-box input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #263445;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.access360-input-box input::placeholder {
+  color: #a0aab5;
+}
+
+.access360-input-error {
+  border-color: #ef4444 !important;
+}
+
+/* =====================================
+   VALIDATION
+===================================== */
+
+.access360-validation-error {
+  display: block;
+  margin-top: 6px;
+  color: #dc2626;
+  font-size: 11px;
+}
+
+/* =====================================
+   PASSWORD EYE BUTTON
+===================================== */
+
+.access360-password-button {
+  padding: 4px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #708397;
+  cursor: pointer;
+}
+
+.access360-password-button:hover {
+  color: #16a536;
+}
+
+/* =====================================
+   FORGOT PASSWORD
+===================================== */
+
+.access360-forgot-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -1px;
+  margin-bottom: 22px;
+}
+
+.access360-forgot-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #149c2c;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.access360-forgot-button:hover {
+  color: #087a22;
+  text-decoration: underline;
+}
+
+/* =====================================
+   MESSAGE
+===================================== */
+
+.access360-message {
+  margin-bottom: 13px;
+  padding: 10px 12px;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 12px;
+}
+
+/* =====================================
+   LOGIN BUTTON
+===================================== */
+
+.access360-login-button {
+  width: 100%;
+  height: 41px;
+  border: none;
+  border-radius: 9px;
+
+  background: linear-gradient(
+    90deg,
+    #15951f 0%,
+    #35b532 100%
+  );
+
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  box-shadow: 0 5px 12px rgba(22, 163, 40, 0.15);
+
+  transition: all 0.2s ease;
+}
+
+.access360-login-button:hover {
+  background: linear-gradient(
+    90deg,
+    #087e1c,
+    #279f2b
+  );
+}
+
+.access360-login-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* =====================================
+   DIVIDER
+===================================== */
+
+.access360-divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin: 17px 0 19px;
+}
+
+.access360-divider div {
+  flex: 1;
+  height: 1px;
+  background: #dce4ed;
+}
+
+.access360-divider span {
+  color: #718096;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* =====================================
+   GUEST LOGIN
+===================================== */
+
+.access360-guest-button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border: 1px solid #d7e0e9;
+  border-radius: 7px;
+  background: #ffffff;
+
+  color: #27384a;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.access360-guest-button svg {
+  color: #27a63b;
+  fill: #27a63b;
+  stroke: #ffffff;
+  background: #27a63b;
+  border-radius: 50%;
+}
+
+.access360-guest-button:hover {
+  background: #f2fbf3;
+  border-color: #22a53a;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 1000px) {
+
+  .access360-card {
+    max-width: 900px;
+    grid-template-columns: 42% 58%;
+  }
+
+  .access360-left {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .access360-right {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .access360-page {
+    padding: 15px;
+    align-items: flex-start;
+  }
+
+  .access360-card {
+    max-width: 480px;
+    height: auto;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    border-radius: 13px;
+  }
+
+  .access360-left {
+    min-height: 430px;
+    padding: 28px 30px 20px;
+  }
+
+  .access360-security {
+    height: 120px;
+  }
+
+  .access360-main-logo {
+    width: 75px;
+    height: 75px;
+  }
+
+  .access360-feature {
+    min-height: 75px;
+  }
+
+  .access360-right {
+    padding: 38px 28px;
+  }
+
+  .access360-form-container {
+    max-width: 100%;
+  }
+
+  .access360-heading h2 {
+    font-size: 24px;
+  }
+
+}
+
+@media (max-width: 380px) {
+
+  .access360-page {
+    padding: 8px;
+  }
+
+  .access360-left {
+    padding: 25px 20px;
+  }
+
+  .access360-right {
+    padding: 30px 18px;
+  }
+
+  .access360-input-box {
+    height: 50px;
+  }
+
+}

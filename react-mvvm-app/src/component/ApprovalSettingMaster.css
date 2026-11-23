@@ -1,0 +1,511 @@
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.approval-page,
+.approval-page * {
+  box-sizing: border-box;
+}
+
+.approval-page {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: #edf5ff;
+  color: #263548;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.approval-sidebar {
+  width: 228px;
+  min-width: 228px;
+  min-height: 100vh;
+  background: #fff;
+  border-right: 1px solid #eee;
+}
+
+.approval-logo-area {
+  height: 155px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.approval-logo {
+  width: 65px;
+  height: 65px;
+}
+
+.approval-logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.approval-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+}
+
+.approval-sidebar-link {
+  height: 50px;
+  width: 100%;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border: none;
+  background: transparent;
+  color: #253247;
+  font-family: inherit;
+  font-size: 15px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.approval-sidebar-link svg {
+  color: #b3b5b7;
+  flex-shrink: 0;
+}
+
+.approval-sidebar-link:hover {
+  background: #f3f9f0;
+}
+
+.approval-sidebar-link.active {
+  background: #79d94f;
+  color: #fff;
+  font-weight: 700;
+}
+
+.approval-sidebar-link.active svg {
+  color: #fff;
+}
+
+/* =========================================
+   MAIN AREA
+========================================= */
+
+.approval-main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* =========================================
+   TOP HEADER
+========================================= */
+
+.approval-header {
+  height: 88px;
+  padding: 0 25px 0 33px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.approval-company h1 {
+  margin: 0;
+  color: #293343;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.approval-company span {
+  color: #a2a2a2;
+  font-size: 14px;
+}
+
+.approval-header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.approval-welcome {
+  color: #263447;
+  font-size: 18px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #00c49a;
+}
+
+.approval-header-icons {
+  height: 55px;
+  padding: 0 16px;
+  background: #eef0ff;
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.approval-header-icons button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  color: #0644c9;
+  cursor: pointer;
+}
+
+.approval-notification {
+  position: absolute;
+  top: -12px;
+  right: -9px;
+  width: 20px;
+  height: 20px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.approval-content {
+  min-height: calc(100vh - 88px);
+  padding: 4px 3.2% 30px;
+  background: #edf5ff;
+}
+
+.approval-card {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+/* =========================================
+   GREEN CARD HEADER
+========================================= */
+
+.approval-card-header {
+  height: 66px;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #60a344;
+  color: #fff;
+}
+
+.approval-back {
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: #0752d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.approval-heading-text h2 {
+  margin: 0;
+  color: #30452a;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.approval-heading-text p {
+  margin: 3px 0 0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.approval-shield {
+  margin-left: auto;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* =========================================
+   SETTINGS BODY
+========================================= */
+
+.approval-body {
+  padding: 11px 21px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.approval-setting-box {
+  width: 100%;
+  min-height: 56px;
+  padding: 10px 16px;
+  border: 1px solid #dfe7f1;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.approval-question-row {
+  min-height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.approval-question-row h3 {
+  margin: 0;
+  color: #293343;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.approval-question-row h3 span {
+  color: #ed4b4b;
+}
+
+/* =========================================
+   YES / NO BUTTONS
+========================================= */
+
+.approval-yes-no {
+  display: flex;
+  flex-shrink: 0;
+  height: 35px;
+  border: 1px solid #dce5ef;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.approval-yes-no button {
+  min-width: 52px;
+  padding: 0 14px;
+  border: none;
+  background: #f1f5f9;
+  color: #52647b;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.approval-yes-no button.selected {
+  background: #60a344;
+  color: #fff;
+  font-weight: 600;
+}
+
+.approval-yes-no button:hover {
+  opacity: 0.9;
+}
+
+/* =========================================
+   RADIO OPTIONS
+========================================= */
+
+.approval-radio-options {
+  margin-top: 12px;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding: 0 0 0 16px;
+  border-left: 2px solid #60a344;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.approval-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #35465c;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.approval-radio-label input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #1684f8;
+  cursor: pointer;
+}
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.approval-success-message {
+  padding: 10px 12px;
+  border: 1px solid #bde4c1;
+  border-radius: 6px;
+  background: #effaf0;
+  color: #21853a;
+  font-size: 13px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.approval-footer {
+  min-height: 58px;
+  padding: 10px 32px 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  border-top: 1px solid #e3eaf3;
+  background: #f8fafc;
+}
+
+.approval-cancel-button,
+.approval-update-button,
+.approval-next-button {
+  height: 36px;
+  min-width: 115px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.approval-cancel-button {
+  background: #fff;
+  border: 1px solid #dce5ef;
+  color: #53647b;
+}
+
+.approval-update-button {
+  background: #388d2b;
+  border: 1px solid #388d2b;
+  color: #fff;
+}
+
+.approval-next-button {
+  min-width: 100px;
+  background: #60a344;
+  border: 1px solid #60a344;
+  color: #fff;
+}
+
+.approval-cancel-button:hover {
+  background: #f0f4f8;
+}
+
+.approval-update-button:hover,
+.approval-next-button:hover {
+  background: #347e29;
+}
+
+.approval-footer-divider {
+  height: 34px;
+  width: 1px;
+  margin: 0 5px;
+  background: #dce5ef;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .approval-sidebar {
+    width: 65px;
+    min-width: 65px;
+  }
+
+  .approval-sidebar-nav {
+    margin-top: 30px;
+  }
+
+  .approval-sidebar-link {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .approval-sidebar-link span {
+    display: none;
+  }
+
+  .approval-welcome {
+    display: none;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .approval-header {
+    padding: 10px;
+  }
+
+  .approval-company h1 {
+    font-size: 14px;
+  }
+
+  .approval-content {
+    padding: 12px;
+  }
+
+  .approval-card-header {
+    padding: 0 12px;
+  }
+
+  .approval-body {
+    padding: 10px;
+  }
+
+  .approval-question-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .approval-setting-box {
+    padding: 12px;
+  }
+
+  .approval-footer {
+    padding: 12px;
+    gap: 7px;
+    flex-wrap: wrap;
+  }
+
+  .approval-cancel-button,
+  .approval-update-button,
+  .approval-next-button {
+    min-width: 0;
+    flex: 1;
+    padding: 0 8px;
+  }
+
+  .approval-footer-divider {
+    display: none;
+  }
+
+}
